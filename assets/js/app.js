@@ -1,3 +1,14 @@
+const scrolltoTop = document.querySelector('.scroll-to-top')
+window.addEventListener('scroll',() => {
+    if (window.scrollY > 300){
+        scrolltoTop.style.display = "grid" 
+    } else{
+        scrolltoTop.style.display = "none"
+    }
+
+})
+
+
 var swiper = new Swiper(".mySwiper", {
     spaceBetween : 24,
     speed: 1000,
@@ -18,3 +29,7 @@ var swiper = new Swiper(".mySwiper", {
 
     }
   });
+
+/* AOS UNIT */
+
+AOS.init();
